@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Found Truck</string>
+    <string name="button_salvar">Salvar</string>
+    <string name="button_modificar">Modificar</string>
+</resources>

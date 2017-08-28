@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ATM Consultoria</string>
+    <string name="empresa_detalhes">Sobre a Empresa</string>
+    <string name="empresa_detalhe_texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit neque velit. Ut rhoncus aliquet dapibus. Mauris id aliquet eros. Donec malesuada diam bibendum risus consectetur, eget imperdiet tellus tincidunt. Vestibulum sit amet urna quam. Nulla tellus ante, pellentesque sed leo a, bibendum commodo sem. Quisque eget turpis sed velit mattis facilisis. Nunc ultricies faucibus eros nec ornare. Vestibulum sed ante eget justo finibus pulvinar a sit amet mi.  Vivamus ut pellentesque nibh. Duis vitae arcu vulputate, feugiat justo vel, tristique tortor. Praesent non magna aliquet, fermentum sapien sodales, aliquet sem. Cras ac fringilla urna. Aenean sed magna ex. Pellentesque dignissim pretium turpis a auctor. Suspendisse imperdiet bibendum bibendum. Aenean ut mi vitae arcu fermentum maximus at non eros. Sed ac leo elit. Vivamus velit nisi, molestie id felis in, lobortis egestas purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer tincidunt ac mi ac consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla dapibus tempus ex id malesuada. Ut finibus pretium fringilla.  Sed hendrerit lacus risus, a elementum augue tristique et. Praesent et fermentum neque. Praesent ullamcorper risus massa, ut accumsan libero cursus ut. Aenean nulla ligula, laoreet quis gravida eget, maximus sed mi. Integer porta rutrum eleifend. Vestibulum sodales elit nulla, at egestas tortor maximus vel. Sed fermentum massa eget est vulputate, eu elementum diam rhoncus.  Donec nisi ante, hendrerit vitae feugiat sed, aliquet ut justo. Etiam auctor nibh a erat consectetur interdum. Nulla laoreet ex dolor, vel dapibus purus consequat consequat. Quisque feugiat in nibh in tempor. In felis ante, condimentum non magna vitae, sagittis aliquet urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum convallis ipsum vitae consequat. In mi nulla, hendrerit sit amet pulvinar et, aliquet id odio. Fusce congue blandit eros, nec euismod risus gravida ac. Cras mattis risus in ipsum gravida tincidunt. Nulla et blandit turpis. Vivamus volutpat imperdiet velit, non blandit ex pellentesque vel. Maecenas tempor, sem non imperdiet tincidunt, metus justo pretium nisi, et hendrerit enim ligula at dolor.</string>
+    <string name="servico_detalhes">Serviços</string>
+    <string name="texto_consultoria">Consultoria</string>
+    <string name="texto_processos">Processos</string>
+    <string name="texto_acompanhamento">Acompanhamento e projetos</string>
+    <string name="texto_cliente">Nossos Clientes</string>
+    <string name="texto_sys">Empresa de desenvolvimento de sistemas</string>
+    <string name="rsm_texto">Empresa de auditoria</string>
+    <string name="contato_detalhes">Contato</string>
+    <string name="email_texto">E-mail: consultoria@atm.com.br</string>
+    <string name="telefone_texto">Telefone: (11) 3333-2222</string>
+    <string name="celular_texto">Celular: (11) 9999-8888</string>
+</resources>

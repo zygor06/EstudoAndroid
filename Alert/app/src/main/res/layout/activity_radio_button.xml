@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="alert.hygor.com.br.alert.RadioButtonActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual a sua comida favorita?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupId"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/lasanhaId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lasanha" />
+
+        <RadioButton
+            android:id="@+id/parmegianaId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Parmegiana" />
+
+        <RadioButton
+            android:id="@+id/macarraoId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Macarrão" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonId"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Escolher"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/escolhaId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+</LinearLayout>

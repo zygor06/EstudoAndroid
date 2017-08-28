@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Laranja_Vivo"
+    android:visibility="visible"
+    tools:context="frasedodia.hygor.com.br.frasedodia.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/botaoNovaFraseId"
+        android:layout_width="328dp"
+        android:layout_height="62dp"
+        android:text="@string/texto_frase_dia"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textoNovaFraseId"
+        android:layout_width="326dp"
+        android:layout_height="272dp"
+        android:fontFamily="monospace"
+        android:text="Nova Frase"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/texto_nova_frase"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="103dp" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:text="@string/button_modificar"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="38dp"
+            tools:text="@string/app_name" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

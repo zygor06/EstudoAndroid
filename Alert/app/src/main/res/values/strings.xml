@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Meus APPS</string>
+    <string name="cor_textoTitulo">Escolha uma cor de fundo</string>
+    <string name="cor_radioAzul">Azul</string>
+    <string name="cor_radioLaranja">Laranja</string>
+    <string name="cor_RadioVerde">Verde</string>
+    <string name="cor_botaoSalvar">Salvar</string>
+    <string name="listaTarefasBtnNome">Adicionar</string>
+</resources>

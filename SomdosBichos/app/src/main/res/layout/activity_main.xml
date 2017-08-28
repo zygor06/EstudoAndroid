@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_som_dos_bichos"
+    tools:context="somdosbichos.hygor.com.br.somdosbichos.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCaoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cao"
+        tools:layout_editor_absoluteY="88dp"
+        tools:layout_editor_absoluteX="61dp" />
+
+    <ImageView
+        android:id="@+id/imgGatoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gato"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imgLeaoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/leao"
+        app:srcCompat="@drawable/leao"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/imgCaoId"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/imgCaoId" />
+
+    <ImageView
+        android:id="@+id/imgMacacoId"
+        android:layout_width="0dp"
+        android:layout_height="99dp"
+        android:background="@drawable/macaco"
+        app:srcCompat="@drawable/macaco"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgOvelhaId"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintRight_toRightOf="@+id/imgGatoId"
+        android:layout_marginTop="102dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="103dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imgGatoId"
+        app:layout_constraintTop_toTopOf="@+id/imgGatoId"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgOvelhaId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ovelha"
+        app:srcCompat="@drawable/ovelha"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/imgLeaoId"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/imgLeaoId" />
+
+    <ImageView
+        android:id="@+id/imgVacaId"
+        android:layout_width="0dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/vaca"
+        app:layout_constraintLeft_toLeftOf="@+id/imgGatoId"
+        app:layout_constraintRight_toRightOf="@+id/imgMacacoId"
+        app:layout_constraintTop_toBottomOf="@+id/imgMacacoId"
+        app:srcCompat="@drawable/vaca"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/direitos"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="41dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
