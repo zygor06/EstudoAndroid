@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WhatsappFake</string>
+    <string name="botao_cadastrar">Cadastrar</string>
+    <string name="validar_texto">Validação</string>
+    <string name="validar_descricao">Você recebeu um SMS para validação do seu número, digite o código de validação abaixo:</string>
+    <string name="hint_nome">Digite o seu nome</string>
+    <string name="validar_codigo">Digite o código</string>
+    <string name="botao_validar">Validar</string>
+</resources>

@@ -8,22 +8,45 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="312dp"
+        android:layout_width="0dp"
         android:layout_height="37dp"
         android:text="Escolha um numero entre 0 e 10"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="@dimen/cabecalho_texto"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="24dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/botaoJogarId"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/botaoJogarId"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="59dp"
         android:text="@string/botao_jogar"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="82dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="82dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp" />
 
     <TextView
         android:id="@+id/resultadoId"
@@ -32,7 +55,14 @@
         android:text="@string/texto_numero"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="@dimen/cabecalho_texto"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="266dp" />
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@+id/botaoJogarId"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp" />
 
 </android.support.constraint.ConstraintLayout>
