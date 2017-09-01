@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
             "Anotações",
             "SQLite Banco de Dados",
             "Lista de Tarefas SQLite",
+            "Fragments",
             "Opção inválida"
     };
 
@@ -81,6 +82,9 @@ public class MainActivity extends Activity {
                         break;
                     case 11:
                         startActivity(new Intent(MainActivity.this, ListaTarefasActivity.class));
+                        break;
+                    case 12:
+                        startActivity(new Intent(MainActivity.this, FragmentsActivity.class));
                         break;
                     default:
                         Toast.makeText(MainActivity.this, "Opção inválida!", Toast.LENGTH_SHORT).show();

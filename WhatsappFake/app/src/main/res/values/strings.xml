@@ -6,9 +6,12 @@
     <string name="hint_nome">Digite o seu nome</string>
     <string name="validar_codigo">Digite o código</string>
     <string name="botao_validar">Validar</string>
-    <string name="botao_logar">Logar</string>
-    <string name="hint_email">Digite seu e-mail</string>
-    <string name="hint_senha">Digite sua senha</string>
-    <string name="texto_cadastre">Não tem conta? Cadastre-se</string>
     <string name="title_activity_cadastro_usuario">CadastroUsuarioActivity</string>
+    <string name="item_configuracoes">Configurações</string>
+    <string name="item_sair">Sair</string>
+    <string name="item_pesquisa">Pesquisa</string>
+    <string name="item_add">Adicionar contato</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

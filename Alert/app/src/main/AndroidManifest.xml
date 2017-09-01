@@ -27,7 +27,8 @@
         <activity android:name=".CorUsuarioActivity" />
         <activity android:name=".AnotacoesActivity" />
         <activity android:name=".SQLiteActivity" />
-        <activity android:name=".ListaTarefasActivity"></activity>
+        <activity android:name=".ListaTarefasActivity" />
+        <activity android:name=".FragmentsActivity"></activity>
     </application>
 
 </manifest>

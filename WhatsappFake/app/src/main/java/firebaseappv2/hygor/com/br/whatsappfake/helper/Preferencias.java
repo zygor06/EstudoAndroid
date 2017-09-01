@@ -15,9 +15,8 @@ public class Preferencias {
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
 
-    private final String CHAVE_NOME = "nome";
-    private final String CHAVE_TELEFONE = "telefone";
-    private final String CHAVE_TOKEN = "token";
+    private final String CHAVE_EMAIL = "email";
+    private final String CHAVE_SENHA = "senha";
     private final String NOME_ARQUIVO = "fakewhatsapp.preferences";
 
     public Preferencias(Context contextoParametro){
@@ -28,11 +27,10 @@ public class Preferencias {
 
     }
 
-    public void salvarUsuarioPreferencias(String nome, String telefone, String token){
+    public void salvarUsuarioPreferencias(String email, String senha){
 
-        this.editor.putString(CHAVE_NOME, nome);
-        this.editor.putString(CHAVE_TELEFONE, telefone);
-        this.editor.putString(CHAVE_TOKEN, token);
+        this.editor.putString(CHAVE_EMAIL, email);
+        this.editor.putString(CHAVE_SENHA, senha);
         this.editor.commit();
     }
 
@@ -40,10 +38,13 @@ public class Preferencias {
 
         HashMap<String, String> dadosUsuario = new HashMap<>();
 
-        dadosUsuario.put(CHAVE_NOME, preferences.getString(CHAVE_NOME, null));
-        dadosUsuario.put(CHAVE_TELEFONE, preferences.getString(CHAVE_TELEFONE, null));
-        dadosUsuario.put(CHAVE_TOKEN, preferences.getString(CHAVE_TOKEN, null));
+        dadosUsuario.put(CHAVE_EMAIL, preferences.getString(CHAVE_EMAIL, null));
+        dadosUsuario.put(CHAVE_SENHA, preferences.getString(CHAVE_SENHA, null));
 
         return dadosUsuario;
+    }
+
+    public void limparUsuarioPreferencias(){
+        salvarUsuarioPreferencias(null, null);
     }
 }

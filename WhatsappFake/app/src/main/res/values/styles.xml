@@ -1,17 +1,26 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorPrimary</item>
+        <item name="android:windowBackground">@color/textColorPrimary</item>
+        <item name="android:itemBackground">@color/textColorPrimary</item>
 
+    </style>
+
+    <style name="botaoPadrao" parent="Theme.AppCompat.Light">
+        <item name="colorButtonNormal">@color/colorPrimaryDarker</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:height">60dp</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
 
 </resources>

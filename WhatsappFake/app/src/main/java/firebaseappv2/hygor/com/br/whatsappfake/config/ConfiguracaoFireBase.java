@@ -2,6 +2,7 @@ package firebaseappv2.hygor.com.br.whatsappfake.config;
 
 import android.provider.ContactsContract;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -12,6 +13,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public final class ConfiguracaoFireBase {
 
     private static DatabaseReference referenciaFirebase;
+    private static FirebaseAuth firebaseAuth;
 
     public static DatabaseReference getFirebase(){
 
@@ -20,6 +22,16 @@ public final class ConfiguracaoFireBase {
         }
 
         return referenciaFirebase;
+    }
+
+    public static FirebaseAuth getFirebaseAuth(){
+
+        if(firebaseAuth == null){
+            firebaseAuth = FirebaseAuth.getInstance();
+        }
+
+        return firebaseAuth;
+
     }
 
 
