@@ -15,8 +15,7 @@ public class Preferencias {
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
 
-    private final String CHAVE_EMAIL = "email";
-    private final String CHAVE_SENHA = "senha";
+    private final String CHAVE_IDENTIFICADOR = "identificador";
     private final String NOME_ARQUIVO = "fakewhatsapp.preferences";
 
     public Preferencias(Context contextoParametro){
@@ -27,24 +26,33 @@ public class Preferencias {
 
     }
 
-    public void salvarUsuarioPreferencias(String email, String senha){
+    public void salvarDados(String nome){
 
-        this.editor.putString(CHAVE_EMAIL, email);
-        this.editor.putString(CHAVE_SENHA, senha);
+        String identificador;
+
+        if(nome != null){
+            identificador = Base64Custom.codificar64(nome);
+        }else{
+            identificador = nome;
+        }
+
+        this.editor.putString(CHAVE_IDENTIFICADOR, identificador);
         this.editor.commit();
     }
 
     public HashMap<String, String> getDadosUsuario(){
 
         HashMap<String, String> dadosUsuario = new HashMap<>();
-
-        dadosUsuario.put(CHAVE_EMAIL, preferences.getString(CHAVE_EMAIL, null));
-        dadosUsuario.put(CHAVE_SENHA, preferences.getString(CHAVE_SENHA, null));
+        dadosUsuario.put(CHAVE_IDENTIFICADOR, preferences.getString(CHAVE_IDENTIFICADOR, null));
 
         return dadosUsuario;
     }
 
     public void limparUsuarioPreferencias(){
-        salvarUsuarioPreferencias(null, null);
+        salvarDados(null);
+    }
+
+    public String getIdentificador(){
+        return preferences.getString(CHAVE_IDENTIFICADOR, null);
     }
 }

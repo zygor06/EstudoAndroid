@@ -24,9 +24,12 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
+import java.util.HashMap;
+
 import firebaseappv2.hygor.com.br.whatsappfake.R;
 import firebaseappv2.hygor.com.br.whatsappfake.config.ConfiguracaoFireBase;
 import firebaseappv2.hygor.com.br.whatsappfake.helper.Base64Custom;
+import firebaseappv2.hygor.com.br.whatsappfake.helper.Preferencias;
 import firebaseappv2.hygor.com.br.whatsappfake.model.Usuario;
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
@@ -36,7 +39,8 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
     private EditText cadastroSenha;
     private Button btnCadastrar;
     private Usuario usuario;
-    private DatabaseReference databaseReference;
+    private Preferencias preferencias;
+    //private DatabaseReference databaseReference;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -72,6 +76,10 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                         String identificadorUsuario = Base64Custom.codificar64(usuario.getEmail());
                         usuario.setId(identificadorUsuario);
                         usuario.salvar();
+
+                        preferencias = new Preferencias(CadastroUsuarioActivity.this);
+                        preferencias.salvarDados(cadastroEmail.getText().toString());
+
                         abrirLoginUsuario();
 
                         Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuário", Toast.LENGTH_LONG).show();

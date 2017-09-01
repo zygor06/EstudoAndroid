@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +23,7 @@ import java.util.HashMap;
 
 import firebaseappv2.hygor.com.br.whatsappfake.R;
 import firebaseappv2.hygor.com.br.whatsappfake.config.ConfiguracaoFireBase;
+import firebaseappv2.hygor.com.br.whatsappfake.helper.Base64Custom;
 import firebaseappv2.hygor.com.br.whatsappfake.helper.Preferencias;
 import firebaseappv2.hygor.com.br.whatsappfake.model.Usuario;
 
@@ -69,16 +71,10 @@ public class LoginActivity extends AppCompatActivity {
     private void verificarUsuarioLogado(){
         authenticator = ConfiguracaoFireBase.getFirebaseAuth();
         if(authenticator.getCurrentUser() != null){
-            abrirTelaPrincipal();
-        }else{
             preferencias = new Preferencias(LoginActivity.this);
-            HashMap<String, String> dados = preferencias.getDadosUsuario();
-            if(!(dados.get("email") == null || dados.get("senha") == null)){
-                usuario = new Usuario();
-                usuario.setEmail(dados.get("email"));
-                usuario.setSenha(dados.get("senha"));
-                validarLogin();
-            }
+            //HashMap<String, String> dados = preferencias.getDadosUsuario();
+            //Toast.makeText(LoginActivity.this,dados.get("identificador"), Toast.LENGTH_SHORT ).show();
+            abrirTelaPrincipal();
         }
     }
 
@@ -139,7 +135,10 @@ public class LoginActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     //Sucesso ao logar
 
-                    preferencias.salvarUsuarioPreferencias(usuario.getEmail(), usuario.getSenha());
+                    preferencias = new Preferencias(LoginActivity.this);
+                    preferencias.salvarDados(usuario.getEmail());
+                    //HashMap<String, String> dados = preferencias.getDadosUsuario();
+                    //Toast.makeText(LoginActivity.this,dados.get("identificador"), Toast.LENGTH_SHORT ).show();
                     abrirTelaPrincipal();
 
                 }else{
