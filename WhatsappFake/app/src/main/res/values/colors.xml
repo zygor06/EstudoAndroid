@@ -2,10 +2,12 @@
 <resources>
 
     <color name="textColorPrimary">#FFFFFF</color>
+    <color name="colorMensagem">#DCF8C6</color>
     <color name="colorAccent">#3d958a</color>
     <color name="colorPrimary">#075E55</color>
     <color name="colorPrimaryDark">#054943</color>
     <color name="colorPrimaryDarker">#043b36</color>
     <color name="colorDark">#000000</color>
     <color name="colorHintPrimary">#898989</color>
+    <color name="cinza">#cccccc</color>
 </resources>

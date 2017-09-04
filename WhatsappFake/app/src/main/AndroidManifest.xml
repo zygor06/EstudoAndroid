@@ -30,6 +30,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="firebaseappv2.hygor.com.br.whatsappfake.activity.MainActivity" />
         </activity>
+        <activity android:name=".activity.ConversaActivity"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="firebaseappv2.hygor.com.br.whatsappfake.activity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

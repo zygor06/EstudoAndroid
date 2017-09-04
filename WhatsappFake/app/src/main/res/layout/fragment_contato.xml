@@ -5,9 +5,13 @@
     tools:context="firebaseappv2.hygor.com.br.whatsappfake.fragment.ContatoFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Contatos fragment " />
 
+    <ListView
+        android:id="@+id/lv_contatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/cinza"
+        android:dividerHeight="0.8dp"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="true" />
 </FrameLayout>

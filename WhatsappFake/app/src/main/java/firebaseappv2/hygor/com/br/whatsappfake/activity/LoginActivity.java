@@ -17,7 +17,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
@@ -36,11 +39,13 @@ public class LoginActivity extends AppCompatActivity {
     private Usuario usuario;
     private FirebaseAuth authenticator;
     private Preferencias preferencias;
+    private ValueEventListener valueEventListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        preferencias = new Preferencias(this);
 
         verificarUsuarioLogado();
 
@@ -72,8 +77,8 @@ public class LoginActivity extends AppCompatActivity {
         authenticator = ConfiguracaoFireBase.getFirebaseAuth();
         if(authenticator.getCurrentUser() != null){
             preferencias = new Preferencias(LoginActivity.this);
-            //HashMap<String, String> dados = preferencias.getDadosUsuario();
-            //Toast.makeText(LoginActivity.this,dados.get("identificador"), Toast.LENGTH_SHORT ).show();
+            HashMap<String, String> dados = preferencias.getDadosUsuario();
+            Toast.makeText(LoginActivity.this,dados.get("identificador"), Toast.LENGTH_SHORT ).show();
             abrirTelaPrincipal();
         }
     }
@@ -135,10 +140,31 @@ public class LoginActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     //Sucesso ao logar
 
-                    preferencias = new Preferencias(LoginActivity.this);
-                    preferencias.salvarDados(usuario.getEmail());
-                    //HashMap<String, String> dados = preferencias.getDadosUsuario();
-                    //Toast.makeText(LoginActivity.this,dados.get("identificador"), Toast.LENGTH_SHORT ).show();
+
+
+                    reference = ConfiguracaoFireBase.getFirebase()
+                            .child("usuarios")
+                            .child(Base64Custom.codificar64(usuario.getEmail()));
+
+                    valueEventListener = new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+
+                            Usuario usuarioRecuperado = dataSnapshot.getValue(Usuario.class);
+
+                            preferencias = new Preferencias(LoginActivity.this);
+                            preferencias.salvarDados(usuario.getEmail(), usuarioRecuperado.getNome());
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    };
+                    reference.addListenerForSingleValueEvent(valueEventListener);
+
+
                     abrirTelaPrincipal();
 
                 }else{
